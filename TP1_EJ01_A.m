@@ -5,7 +5,7 @@ p1_img = imread('Imagenes/paloma.bmp');
 p2_img = imread('Imagenes/quijote.bmp');
 p3_img = imread('Imagenes/torero.bmp');
 
-[x y] = size(p1_img);
+[x y] = size(p1_img); 
 
 %------ Patrones vectorizados----------
 p1 = single(p1_img(:))*2 - 1;
