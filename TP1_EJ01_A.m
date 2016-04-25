@@ -1,6 +1,29 @@
-clc; 
-clear all;
+%**************************************************************************
+%  MATERIA:                                                               *
+%  Sistemas Adaptativos: Redes Neuronales                                 *
+%                                                                         *
+%  UBA-FI                                                                 *
+%  Universidad de Buenos Aires                                            *
+%  Facultad de Ingeniería                                                 *
+%  Año: 2016                                                              *
+%                                                                         *
+%  Docentes                                                               *
+%    Dr. Sergio Lew                                                       *
+%                                                                         *
+%                                                                         *
+%**************************************************************************
+%  Autor: Mamani Gutierrez Raul Alejandro                                 *
+%  Fecha: 24/03/2016                                                      *
+%  Descripcion: TP1 - EJ01_A                                              *
+%               Actualización Sincronica de una Red de Hopfield           *
+%                                                                         *
+%**************************************************************************
 
+clc;
+clear all;
+close all;
+fclose all;
+%------------- Lectura de Imagenes ------------------
 p1_img = imread('Imagenes/paloma.bmp');
 p2_img = imread('Imagenes/quijote.bmp');
 p3_img = imread('Imagenes/torero.bmp');
@@ -8,6 +31,7 @@ p3_img = imread('Imagenes/torero.bmp');
 [x y] = size(p1_img); 
 
 %------ Patrones vectorizados----------
+%------ Transformo los 0 en (-1)-------
 p1 = single(p1_img(:))*2 - 1;
 p2 = single(p2_img(:))*2 - 1;
 p3 = single(p3_img(:))*2 - 1;
